@@ -9,13 +9,13 @@ void AddString(HWND, LPCWSTR);
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR pszCmdLine, _In_ int nCmdShow)
 {
     WNDCLASSW WndClass = { 0 };
-    WndClass.hbrBackground = reinterpret_cast<HBRUSH>(COLOR_WINDOW + 1);
-    WndClass.hCursor = LoadCursorW(NULL, IDC_ARROW);
-    WndClass.hIcon = LoadIconW(NULL, IDI_APPLICATION);
-    WndClass.hInstance = hInstance;
-    WndClass.lpfnWndProc = WndProc;
-    WndClass.lpszClassName = kClassName;
-    WndClass.style = CS_HREDRAW | CS_VREDRAW;
+    WndClass.hbrBackground  = reinterpret_cast<HBRUSH>(COLOR_WINDOW + 1);
+    WndClass.hCursor        = LoadCursorW(NULL, IDC_ARROW);
+    WndClass.hIcon          = LoadIconW(NULL, IDI_APPLICATION);
+    WndClass.hInstance      = hInstance;
+    WndClass.lpfnWndProc    = WndProc;
+    WndClass.lpszClassName  = kClassName;
+    WndClass.style          = CS_HREDRAW | CS_VREDRAW;
     RegisterClassW(&WndClass);
 
     HWND hWnd = NULL;
